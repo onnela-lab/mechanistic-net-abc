@@ -25,6 +25,8 @@ Install with `pip` from a terminal
 pip install git+https://github.com/onnela-lab/mechanistic-net-abc.git
 ```
 
+**Important:** Before running the different examples please edit `settings.py` to indicate a valid working directory for each studied example. Figures, simulated data and results will be stored in these directories.
+
 ## Package outline
 
 The `mechanistic_net_abc` folder contains the package, made of the following modules:
@@ -45,10 +47,6 @@ The folder `2-PA_two_noises` considers the previous example where we add an addi
 The folder `3-PA_RA_TF_mixture` contains a simulated example where three mechanisms are relevant and their weights and parameters are inferred.
 
 The folder `4-household_analysis` is dedicated to the study of a real household network.
-
-
-
-**Important:** Before running the different examples please edit `settings.py` to indicate a valid working directory for each studied example. Figures, simulated data and results will be stored in these directories.
 
 ## Simulated examples
 
