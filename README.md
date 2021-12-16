@@ -46,6 +46,10 @@ The folder `3-PA_RA_TF_mixture` contains a simulated example where three mechani
 
 The folder `4-household_analysis` is dedicated to the study of a real household network.
 
+
+
+**Important:** Before running the different examples please edit `settings.py` to indicate a valid working directory for each studied example. Figures, simulated data and results will be stored in these directories.
+
 ## Simulated examples
 
 We provide three simulated studies that can show you how to formulate a model of mixture of mechanisms, generate data from this model, select summaries with our random forest-based proposal and infer model parameters with ABC. Codes are ready to launch in the folders `1-PA_one_noise`, `2-PA_two_noises` and `3-PA_RA_TF_mixture`.
