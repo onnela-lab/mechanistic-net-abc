@@ -17,12 +17,12 @@ import multiprocessing
 from collections import Counter
 from collections import defaultdict
 
-from mechanistic_network_models.summaries import compute_many_summaries_undirected
-from mechanistic_network_models.mechanisms import preferential_attachment_growth, random_attachment_growth, triangle_formation_node_addition
-from mechanistic_network_models.data_generation import data_ref_table_simulation
-from mechanistic_network_models.utility import drop_redundant_features
-from mechanistic_network_models.abc import abc_RSMCABC, distance_euclidean_std
-from mechanistic_network_models.summary_selection import recursiveElimination_RFMDA_select_summaries
+from mechanistic_net_abc.summaries import compute_many_summaries_undirected
+from mechanistic_net_abc.mechanisms import preferential_attachment_growth, random_attachment_growth, triangle_formation_node_addition
+from mechanistic_net_abc.data_generation import data_ref_table_simulation
+from mechanistic_net_abc.utility import drop_redundant_features
+from mechanistic_net_abc.abc import abc_RSMCABC, distance_euclidean_std
+from mechanistic_net_abc.summary_selection import recursiveElimination_RFMDA_select_summaries
 from pkg_resources import resource_filename
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
@@ -1457,7 +1457,7 @@ axis.axvline(x=df_obs_sum_3_scaled_sel['avg_clustering_coef'][0], linestyle='das
 cbr = fig.colorbar(tmp, ax=axis)
 cbr.ax.set_title(r"$\alpha_{TF}$", {'fontsize': 15})
 axis.set_ylabel("Uniform noise", size=13)
-axis.set_xlabel("Avg. clustering coef.", size=13)
+axis.set_xlabel("Average clustering coefficient", size=13)
 fig.savefig(dir_save_plots+"/summaries_avg_clust_coef_noise_wTF_"+sel_type+example_number+".pdf", bbox_inches='tight')
 fig.savefig(dir_save_plots+"/summaries_avg_clust_coef_noise_wTF_"+sel_type+example_number+".eps", bbox_inches='tight')
 fig.show()
@@ -1515,7 +1515,7 @@ axis.scatter(df_obs_sum_3_scaled_sel['num_4cores'],
 cbr = fig.colorbar(tmp, ax=axis)
 cbr.ax.set_title(r"$\alpha_{TF}$", {'fontsize': 15})
 axis.set_ylabel("Transitivity", size=13)
-axis.set_xlabel("Number of 4 cores", size=13)
+axis.set_xlabel("Number of 4-cores", size=13)
 fig.savefig(dir_save_plots+"/summaries_4cores_transitivity_wTF_"+sel_type+example_number+".pdf", bbox_inches='tight')
 fig.savefig(dir_save_plots+"/summaries_4cores_transitivity_wTF_"+sel_type+example_number+".eps", bbox_inches='tight')
 fig.show()
@@ -1537,7 +1537,7 @@ axis.scatter(df_obs_sum_3_scaled_sel['num_4cores'],
 cbr = fig.colorbar(tmp, ax=axis)
 cbr.ax.set_title(r"$\alpha_{TF}$", {'fontsize': 15})
 axis.set_ylabel("Degree standard deviation", size=13)
-axis.set_xlabel("Number of 4 cores", size=13)
+axis.set_xlabel("Number of 4-cores", size=13)
 fig.savefig(dir_save_plots+"/summaries_4cores_deg_std_wTF_"+sel_type+example_number+".pdf", bbox_inches='tight')
 fig.savefig(dir_save_plots+"/summaries_4cores_deg_std_wTF_"+sel_type+example_number+".eps", bbox_inches='tight')
 fig.show()
